@@ -6,12 +6,11 @@ public class ex001prog
     Console.WriteLine(msg);
     return Convert.ToInt32(Console.ReadLine());
   }
-  public static string NToOne(int N, string result = "")
+  public static string NToOne(int N)
   {
     if (N > 1)
-      result += $"{N}, {NToOne(N - 1, result)}";
-    else result += $"{N}";
-    return result;
+    return $"{N}, {NToOne(N - 1)}";
+    else return $"{N}";
   }
 
   public static void ex001()

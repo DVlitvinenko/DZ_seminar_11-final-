@@ -6,13 +6,11 @@ public class ex002prog
     return Convert.ToInt32(Console.ReadLine());
   }
 
-  public static int SummFromMToN(int numberFrom, int numberTo, int result = 0)
+  public static int SummFromMToN(int numberFrom, int numberTo)
   {
-    if (numberFrom >= numberTo)
-    {
-      result += numberFrom + SummFromMToN(numberFrom - 1, numberTo, result);
-    }
-    return result;
+    if (numberFrom >= numberTo) 
+    return numberFrom + SummFromMToN(numberFrom - 1, numberTo);
+    return 0;
   }
   public static void ex002()
   {
